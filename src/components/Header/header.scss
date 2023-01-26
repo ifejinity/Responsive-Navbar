@@ -18,9 +18,19 @@ body {
 }
 
 .navbar {
-    height: 50px;
+    height: 60px;
     background-color: #fef7e5;
-    position: relative;
+    position: sticky;
+    top: 0;
+    .logo-container{
+        display: flex;
+    }
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+    display: none;
 }
 
 .menu-icon {
@@ -39,8 +49,8 @@ body {
 }
 
 .nav-elements ul a {
-    font-size: 12px;
-    font-weight: 400;
+    font-size: 15px;
+    font-weight: 500;
     color: #2f234f;
     text-decoration: none;
 }
@@ -67,21 +77,28 @@ body {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 660px) {
     .menu-icon {
         display: block;
         cursor: pointer;
         display: flex;
-        transition: 0.5s;
+    }
+
+    .logo-container .logo{
+        display: block;
+    }
+
+    .logo-container h1{
+        display: none;
     }
 
     .nav-elements {
         position: absolute;
         right: 0;
-        top: 50px;
+        top: 60px;
         background-color: #fef7e5;
         width: 0px;
-        height: calc(100vh - 50px);
+        height: calc(100vh - 60px);
         transition: all 0.3s ease-in;
         overflow: hidden;
     }
